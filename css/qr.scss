@@ -1,0 +1,119 @@
+
+@import 'bourbon.scss';
+@import '_reset.scss';
+
+
+$bgColor: #E6E6E6;
+$linkColor: #e0e;
+$textColor: #666;
+$buttonBgColor: #e0e;
+$buttonTextColor: #fff;
+$selectionBgColor: #999;
+$selectionTextColor: #eee;
+
+
+::-moz-selection {
+    background: $selectionBgColor;
+    color: $selectionTextColor;
+    text-shadow: none;
+}
+
+::selection {
+    background: $selectionBgColor;
+    color: $selectionTextColor;
+    text-shadow: none;
+}
+
+
+html,
+body {
+	background-color: $bgColor
+}
+
+body {
+	padding: 20px;
+	font: 18px/22px $helvetica;
+	color: $textColor;
+}
+
+a {
+	@include transition (all 0.2s ease-in-out);
+	color: $linkColor;
+	text-decoration: none;
+
+	&:hover {
+		text-decoration: underline;
+		color: lighten($linkColor, 10%);
+	}
+}
+
+a.bookmarklet {
+	display: inline-block;
+	padding: 8px 16px;
+	background-color: $buttonBgColor;
+	color: $buttonTextColor;
+	font-size: 16px;
+	border-radius: 4px;
+	border: 1px solid darken($buttonBgColor, 8%);
+	text-decoration: none;
+
+	&:hover {
+		background-color: darken($buttonBgColor, 8%);
+	}
+}
+
+p {
+	margin-bottom: 10px;
+}
+
+h1,
+h2 {
+	font-weight: bold;
+	text-transform: uppercase;
+	margin-bottom: 10px;
+	color: lighten($textColor, 30%);
+	text-shadow: 0 1px 0 lighten($textColor, 70%);
+}
+
+h1 {
+	font-size: 22px;
+}
+
+h2 {
+	font-size: 18px;
+	color: $textColor;
+}
+
+header {
+	margin-bottom: 30px;
+}
+
+footer {
+	padding: 10px 0;
+	font-size: 12px;
+	line-height: 18px;
+	color: lighten($textColor, 20%);
+	border-top: 1px solid lighten($textColor, 40%);
+	margin-top: 50px;
+}
+
+section {
+	margin-bottom: 30px;
+}
+
+code {
+	padding: 2px;
+	font-family: $monospace;
+	background-color: #ccc;
+	border-radius: 4px;
+	text-shadow: 0 1px 0 lighten($textColor, 50%);
+}
+
+.bullet {
+	list-style: disc;
+	padding-left: 20px;
+
+	li {
+		margin-bottom: 5px;
+	}
+}

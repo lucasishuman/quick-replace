@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+
+		<meta charset="utf-8">
+
+		<title>Quick Replace Bookmarklet</title>
+		
+		<link rel="stylesheet" href="css/qr.css">
+
+		<script type="text/javascript">
+
+			var _gaq = _gaq || [];
+			_gaq.push(['_setAccount', 'UA-510504-23']);
+			_gaq.push(['_trackPageview']);
+
+			(function() {
+				var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+				ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+				var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+			})();
+
+		</script>
+
+	</head>
+
+	<body>
+
+		<header>
+			<h1>Quick Replace Bookmarklet</h1>
+		</header>
+
+		<section>
+
+			<h2>What is it?</h2>
+
+			<p>Quickly replace text or images in a webpage locally to see how it looks without knowing any HTML or having to upload files to a server.</p>
+
+		</section>
+
+		<section>
+
+			<h2>Installation</h2>
+
+			<p>Drag this link to your bookmarks or click it to try it out</p>
+
+			<p><a href="javascript:(function(){if (window.quickReplace) {window.quickReplace.toggle();} else {var script = document.createElement('script');script.setAttribute('src', 'http://quick-replace.com/b/quick-replace.min.js');document.body.appendChild(script);}}());" class="bookmarklet">Quick Replace</a></p>
+
+		</section>
+
+		<section>
+
+			<h2>Usage</h2>
+
+			<ul class="bullet">
+				<li>Click the bookmark to enable &#8220;edit mode&#8221;
+				<li>Roll over any element to see some useful info about the text or image it contains</li>
+				<li>Click any text to edit it</li>
+				<li>Drag an image from your local machine and drop it on top of an image in the browser to replace it</li>
+				<li>Click the &#8220;X&#8221; in the upper-right of the viewport or the bookmark again to exit &#8220;edit mode&#8221;</li>
+			</ul>
+
+		</section>
+
+		<section>
+
+			<h2>Known issues</h2>
+
+			<ul class="bullet">
+				<li>Dragging an image into the browser to replace an image will only work in browsers that support the File and FileReader API, like <a href="http://www.google.com/chrome">Chrome</a> &amp; <a href="http://www.mozilla.org/firefox">Firefox</a></li>
+				<li>Dragging an image into the browser to replace an image will only work with images displayed as an <code>img</code> element - not as a CSS <code>background-image</code> or a <code>canvas</code> element</li>
+				<li>Replaced images will be shown at the same dimensions as specified by the original image (via <code>img</code> attributes or CSS styles)</li>
+				<li>Chrome will prevent the script, which is insecure (served over HTTP), from being loaded into a secure page (served via HTTPS)</li>
+			</ul>
+
+		</section>
+
+		<footer>
+			<p>Built by <a href="http://lucasishuman.com/">Lucas</a></p>
+		</footer>
+
+	</body>
+
+</html>
