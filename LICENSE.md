@@ -1,4 +1,4 @@
-The MIT License (MIT)
+MIT License (MIT)
 
 Copyright (C) 2013 Lucas J. Shuman
 
